@@ -1,4 +1,4 @@
-import { PaletteMode, PaletteOptions } from '@mui/material';
+import { PaletteMode, PaletteOptions } from '@mui/material'
 
 const palette = (mode: PaletteMode): PaletteOptions =>
   mode === 'dark'
@@ -38,5 +38,5 @@ const palette = (mode: PaletteMode): PaletteOptions =>
           primary: '#1C2565',
           secondary: '#576081',
         },
-      };
-export default palette as PaletteOptions;
+      }
+export default palette as PaletteOptions

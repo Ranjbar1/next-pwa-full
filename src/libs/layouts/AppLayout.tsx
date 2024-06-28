@@ -7,59 +7,59 @@ import {
   ListItem,
   Toolbar,
   Typography,
-} from '@mui/material';
-import React from 'react';
+} from '@mui/material'
+import React from 'react'
 
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import MailIcon from '@mui/icons-material/Mail'
+import MenuIcon from '@mui/icons-material/Menu'
+import InboxIcon from '@mui/icons-material/MoveToInbox'
+import CssBaseline from '@mui/material/CssBaseline'
+import Divider from '@mui/material/Divider'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 export default function AppLayout({ children }: Props) {
   return (
     <React.Fragment>
       <ResponsiveDrawer>{children}</ResponsiveDrawer>
     </React.Fragment>
-  );
+  )
 }
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 interface PropsDrawer {
   /**
    * Injected by the documentation to work in an iframe.
    * Remove this when copying and pasting into your project.
    */
-  children: React.ReactNode;
-  window?: () => Window;
+  children: React.ReactNode
+  window?: () => Window
 }
 
 export function ResponsiveDrawer(props: PropsDrawer) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
+  const { window } = props
+  const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [isClosing, setIsClosing] = React.useState(false)
 
   const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-  };
+    setIsClosing(true)
+    setMobileOpen(false)
+  }
 
   const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
-  };
+    setIsClosing(false)
+  }
 
   const handleDrawerToggle = () => {
     if (!isClosing) {
-      setMobileOpen(!mobileOpen);
+      setMobileOpen(!mobileOpen)
     }
-  };
+  }
 
   const drawer = (
     <div>
@@ -91,11 +91,11 @@ export function ResponsiveDrawer(props: PropsDrawer) {
         ))}
       </List>
     </div>
-  );
+  )
 
   // Remove this const when copying and pasting into your project.
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    window !== undefined ? () => window().document.body : undefined
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -175,5 +175,5 @@ export function ResponsiveDrawer(props: PropsDrawer) {
         {props.children}
       </Box>
     </Box>
-  );
+  )
 }

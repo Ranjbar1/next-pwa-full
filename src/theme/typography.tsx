@@ -1,13 +1,13 @@
-import { Palette } from '@mui/material';
-import { TypographyOptions } from '@mui/material/styles/createTypography';
-import localFont from 'next/font/local';
-import { Roboto } from 'next/font/google';
+import { Palette } from '@mui/material'
+import { TypographyOptions } from '@mui/material/styles/createTypography'
+import localFont from 'next/font/local'
+import { Roboto } from 'next/font/google'
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
-});
+})
 export const IRANSansX = localFont({
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -28,13 +28,13 @@ export const IRANSansX = localFont({
       style: 'normal',
     },
   ],
-});
+})
 export function remToPx(value: string) {
-  return Math.round(parseFloat(value) * 16);
+  return Math.round(parseFloat(value) * 16)
 }
 
 export function pxToRem(value: number) {
-  return `${value / 16}rem`;
+  return `${value / 16}rem`
 }
 
 export function responsiveFontSizes({
@@ -42,9 +42,9 @@ export function responsiveFontSizes({
   md,
   lg,
 }: {
-  sm: number;
-  md: number;
-  lg: number;
+  sm: number
+  md: number
+  lg: number
 }) {
   return {
     '@media (min-width:600px)': {
@@ -56,18 +56,18 @@ export function responsiveFontSizes({
     '@media (min-width:1200px)': {
       fontSize: pxToRem(lg),
     },
-  };
+  }
 }
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
-    fontWeightSemiBold: React.CSSProperties['fontWeight'];
+    fontWeightSemiBold: React.CSSProperties['fontWeight']
   }
 }
 type Typography =
   | TypographyOptions
   | ((palette: Palette) => TypographyOptions)
-  | undefined;
+  | undefined
 
 const typography: Typography = {
   fontFamily: IRANSansX.style.fontFamily,
@@ -145,5 +145,5 @@ const typography: Typography = {
     fontSize: pxToRem(14),
     textTransform: 'unset',
   },
-};
-export default typography;
+}
+export default typography

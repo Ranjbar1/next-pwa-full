@@ -1,4 +1,4 @@
-import { Components, ComponentsOverrides, Theme } from '@mui/material';
+import { Components, ComponentsOverrides, Theme } from '@mui/material'
 // import type {} from "@mui/x-data-grid/themeAugmentation";
 // const MuiDataGridOverride: ComponentsOverrides<Theme>["MuiDataGrid"] = {
 //   root: ({ theme, ownerState }) => ({}),
@@ -22,5 +22,5 @@ const components: Components<Theme> = {
       }),
     },
   },
-};
-export default components;
+}
+export default components

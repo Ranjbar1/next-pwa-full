@@ -1,9 +1,9 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React from 'react'
+import Navbar from '../components/Navbar'
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 export default function LandingLayout({ children }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function LandingLayout({ children }: Props) {
       <Navbar />
       LandingLayout {children}
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import { AppBar, Button, Container, Stack, Toolbar } from '@mui/material';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { AppBar, Button, Container, Stack, Toolbar } from '@mui/material'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 export default function Navbar() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <AppBar>
       <Container>
@@ -31,5 +31,5 @@ export default function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+  )
 }
