@@ -12,9 +12,19 @@ import { prefixer } from 'stylis'
 import rtlPlugin from 'stylis-plugin-rtl'
 import { CssBaseline } from '@mui/material'
 import Head from 'next/head'
+import { NextPage } from 'next'
+import { ReactElement, ReactNode } from 'react'
 declare module '@mui/material/styles' {
   interface Theme {}
   interface ThemeOptions {}
+}
+
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
 }
 const cacheRtl = createCache({
   key: 'muirtl',
@@ -31,7 +41,9 @@ const theme: Theme = createTheme({
 export default function App({
   Component,
   pageProps,
-}: AppProps & DocumentHeadTagsProps) {
+}: AppProps & DocumentHeadTagsProps & AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
+
   return (
     <>
       <Head>
@@ -74,7 +86,8 @@ export default function App({
       <AppCacheProvider value={cacheRtl} {...pageProps}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Component {...pageProps} />
+
+          {getLayout(<Component {...pageProps} />)}
         </ThemeProvider>
       </AppCacheProvider>
     </>

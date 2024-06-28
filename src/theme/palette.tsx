@@ -6,6 +6,7 @@ const palette = (mode: PaletteMode): PaletteOptions =>
         background: {
           default: '#212542',
           paper: '#141835',
+          // 'paper2': '#BEDCFF',
         },
         secondary: {
           main: '#212542',
@@ -21,22 +22,20 @@ const palette = (mode: PaletteMode): PaletteOptions =>
         },
       }
     : {
-        background: {
-          default: '#EFEFEF',
-          paper: '#1C2565',
+        mode: 'light',
+        primary: {
+          main: '#3f51b5',
         },
         secondary: {
-          main: '#1C2565',
-          dark: '#101645',
+          main: '#f50057',
         },
-        primary: {
-          main: '#F6CA66',
-          light: '#81C14B',
-          dark: '',
+        background: {
+          default: '#d7f2fd',
+          paper: '#bbdefb',
         },
         text: {
-          primary: '#1C2565',
-          secondary: '#576081',
+          primary: 'rgba(0,18,117,0.87)',
+          secondary: 'rgba(0,18,117,0.6)',
         },
       }
 export default palette as PaletteOptions

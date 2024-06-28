@@ -18,7 +18,29 @@ const components: Components<Theme> = {
   MuiPaper: {
     styleOverrides: {
       root: ({ theme }) => ({
-        background: theme.palette.background.default,
+        // background: theme.palette.background.default,
+        background: 'none',
+        borderRadius: '0',
+        boxShadow: 'none',
+      }),
+    },
+  },
+  MuiButton: {
+    defaultProps: {
+      fullWidth: false,
+    },
+    styleOverrides: {
+      root: ({ theme }) => ({}),
+      contained: ({ theme }) => ({
+        background: '#6750A4',
+        // color: theme.palette.text.primary,
+        borderRadius: theme.spacing('16px'),
+      }),
+      text: ({ theme }) => ({
+        border: 'none',
+        color: '#6750A4',
+        width: 'auto',
+        boxShadow: '0',
       }),
     },
   },

@@ -8,6 +8,7 @@ export default function Navbar() {
       <Container>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Stack direction={'row'} gap={5}>
+            <Link href={'/contentForm'}> Content Form </Link>
             <Link href={'/app'}> اپلیکیشن</Link>
             <Link href={'/gallery'}> گالری</Link>
             <Link href={'/blogs'}> مقالات</Link>

@@ -113,7 +113,7 @@ export function ResponsiveDrawer(props: PropsDrawer) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ ml: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -127,7 +127,6 @@ export function ResponsiveDrawer(props: PropsDrawer) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           container={container}
           variant="temporary"
