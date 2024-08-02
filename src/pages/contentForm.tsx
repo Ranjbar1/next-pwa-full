@@ -51,7 +51,7 @@ export default function ContentForm() {
             <Button
               type="reset"
               color="error"
-              onClick={() => {
+              onMouseDown={() => {
                 methods.reset(() => {})
               }}
             >

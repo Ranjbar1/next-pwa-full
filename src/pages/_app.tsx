@@ -1,19 +1,21 @@
 import '@/styles/globals.css'
 import { components, palette, typography } from '@/theme'
+import createCache from '@emotion/cache'
+import { CssBaseline } from '@mui/material'
 import {
   AppCacheProvider,
   DocumentHeadTags,
   DocumentHeadTagsProps,
 } from '@mui/material-nextjs/v13-pagesRouter'
 import { Theme, ThemeProvider, createTheme } from '@mui/material/styles'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import createCache from '@emotion/cache'
+import Head from 'next/head'
+import { ReactElement, ReactNode } from 'react'
 import { prefixer } from 'stylis'
 import rtlPlugin from 'stylis-plugin-rtl'
-import { CssBaseline } from '@mui/material'
-import Head from 'next/head'
-import { NextPage } from 'next'
-import { ReactElement, ReactNode } from 'react'
 declare module '@mui/material/styles' {
   interface Theme {}
   interface ThemeOptions {}
@@ -31,19 +33,23 @@ const cacheRtl = createCache({
   stylisPlugins: [prefixer, rtlPlugin],
 })
 
-const theme: Theme = createTheme({
-  direction: 'rtl',
-  typography,
-  components,
-  palette,
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {},
+  },
 })
-
 export default function App({
   Component,
   pageProps,
 }: AppProps & DocumentHeadTagsProps & AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
+  const theme: Theme = createTheme({
+    direction: 'rtl',
+    typography,
+    components,
+    palette: palette('light'),
+  })
   return (
     <>
       <Head>
@@ -86,8 +92,10 @@ export default function App({
       <AppCacheProvider value={cacheRtl} {...pageProps}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-
-          {getLayout(<Component {...pageProps} />)}
+          <QueryClientProvider client={queryClient}>
+            {getLayout(<Component {...pageProps} />)}
+            <ReactQueryDevtools />
+          </QueryClientProvider>{' '}
         </ThemeProvider>
       </AppCacheProvider>
     </>

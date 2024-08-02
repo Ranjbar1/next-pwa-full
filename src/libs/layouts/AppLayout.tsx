@@ -18,6 +18,7 @@ import Divider from '@mui/material/Divider'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
+import { useRouter } from 'next/router'
 
 type Props = {
   children: React.ReactNode
@@ -33,15 +34,36 @@ export default function AppLayout({ children }: Props) {
 const drawerWidth = 240
 
 interface PropsDrawer {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
   children: React.ReactNode
   window?: () => Window
 }
 
+type pathType = {
+  label: string
+  path: string
+  Icon: React.ReactNode
+}
+
+const paths: pathType[] = [
+  {
+    label: 'هفته ها',
+    path: '/app/dashboard/weeks',
+    Icon: <InboxIcon />,
+  },
+  {
+    label: 'فروشگاه',
+    path: '/shop',
+    Icon: <MailIcon />,
+  },
+  {
+    label: 'گالری',
+    path: '/gallery',
+    Icon: <InboxIcon />,
+  },
+]
+
 export function ResponsiveDrawer(props: PropsDrawer) {
+  const router = useRouter()
   const { window } = props
   const [mobileOpen, setMobileOpen] = React.useState(false)
   const [isClosing, setIsClosing] = React.useState(false)
@@ -66,13 +88,11 @@ export function ResponsiveDrawer(props: PropsDrawer) {
       <Toolbar />
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+        {paths.map((path, index) => (
+          <ListItem key={path.label} disablePadding>
+            <ListItemButton onMouseDown={() => router.push(path.path)}>
+              <ListItemIcon>{path.Icon}</ListItemIcon>
+              <ListItemText primary={path.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -93,7 +113,6 @@ export function ResponsiveDrawer(props: PropsDrawer) {
     </div>
   )
 
-  // Remove this const when copying and pasting into your project.
   const container =
     window !== undefined ? () => window().document.body : undefined
 
@@ -112,13 +131,13 @@ export function ResponsiveDrawer(props: PropsDrawer) {
             color="inherit"
             aria-label="open drawer"
             edge="start"
-            onClick={handleDrawerToggle}
+            onMouseDown={handleDrawerToggle}
             sx={{ ml: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Better MOM
           </Typography>
         </Toolbar>
       </AppBar>
@@ -135,7 +154,7 @@ export function ResponsiveDrawer(props: PropsDrawer) {
           onTransitionEnd={handleDrawerTransitionEnd}
           onClose={handleDrawerClose}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

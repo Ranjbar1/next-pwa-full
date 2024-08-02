@@ -1,9 +1,9 @@
 import { LandingLayout } from '@/libs/layouts'
-import { getAllWeeks } from '@/services/weeks'
-import { Button } from '@mui/material'
-import { useEffect, useState } from 'react'
-import { set } from 'react-hook-form'
+import { useTheme } from '@mui/material'
 
 export default function Page() {
+  const theme = useTheme()
+  console.log(theme)
+
   return <LandingLayout>asd</LandingLayout>
 }

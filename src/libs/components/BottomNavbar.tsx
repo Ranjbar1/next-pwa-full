@@ -55,7 +55,7 @@ export default function BottomNavbar() {
             label={item.label}
             value={item.path}
             icon={item.icon}
-            onClick={() => router.push(item.path)}
+            onMouseDown={() => router.push(item.path)}
           />
         ))}
       </BottomNavigation>

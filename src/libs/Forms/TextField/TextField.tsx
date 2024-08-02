@@ -67,7 +67,7 @@ const RHFTextField = ({
                 endAdornment: type === 'password' && (
                   <InputAdornment position="end">
                     <IconButton
-                      onClick={() => setShowPassword((prev) => !prev)}
+                      onMouseDown={() => setShowPassword((prev) => !prev)}
                     >
                       {/* <CustomIcon
                         icon={showPassword ? 'EyeIcon' : 'EyeSlashIcon'}

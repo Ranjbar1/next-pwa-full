@@ -5,6 +5,11 @@ import { Components, ComponentsOverrides, Theme } from '@mui/material'
 // };
 
 const components: Components<Theme> = {
+  MuiAvatar: {
+    defaultProps: {
+      variant: 'square',
+    },
+  },
   MuiAppBar: {
     defaultProps: { elevation: 1 },
     styleOverrides: {
@@ -32,13 +37,13 @@ const components: Components<Theme> = {
     styleOverrides: {
       root: ({ theme }) => ({}),
       contained: ({ theme }) => ({
-        background: '#6750A4',
+        // background: '#6750A4',
         // color: theme.palette.text.primary,
         borderRadius: theme.spacing('16px'),
       }),
       text: ({ theme }) => ({
         border: 'none',
-        color: '#6750A4',
+        // color: '#6750A4',
         width: 'auto',
         boxShadow: '0',
       }),

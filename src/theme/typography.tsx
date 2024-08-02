@@ -1,13 +1,12 @@
 import { Palette } from '@mui/material'
 import { TypographyOptions } from '@mui/material/styles/createTypography'
 import localFont from 'next/font/local'
-import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+// const roboto = Roboto({
+//   weight: ['300', '400', '500', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// })
 export const IRANSansX = localFont({
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
