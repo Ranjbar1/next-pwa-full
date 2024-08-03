@@ -1,8 +1,7 @@
 import CircleIcon from './CircleIcon'
 import WidgetsIcon from '@mui/icons-material/Widgets'
-const Summarys = [{}]
 
-export default function SummaryBox() {
+export default function LatestActivity() {
   return (
     <div
       style={{
@@ -10,6 +9,7 @@ export default function SummaryBox() {
         backgroundColor: '#5d5757',
         borderRadius: '0.7rem',
         padding: '5px 18px',
+        margin: '0.5rem 0',
       }}
     >
       <h2
@@ -20,7 +20,7 @@ export default function SummaryBox() {
           padding: '0',
         }}
       >
-        خلاصه ای از امروز
+        آخرین فعالیت ها
       </h2>
       <div
         style={{

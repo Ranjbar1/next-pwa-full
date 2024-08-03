@@ -11,14 +11,22 @@ export default function CircleIcon(props: CircleIconProperty) {
       sx={{
         borderRadius: '50%',
         background: props.background,
-        width: '2.5rem',
-        height: '2.5rem',
+        width: '2rem',
+        height: '2rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
       }}
     >
-      <span>{props.icon}</span>
+      <span
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {props.icon}
+      </span>
     </Box>
   )
 }
