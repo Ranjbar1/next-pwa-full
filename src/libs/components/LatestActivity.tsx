@@ -9,7 +9,6 @@ export default function LatestActivity() {
         backgroundColor: '#5d5757',
         borderRadius: '0.7rem',
         padding: '5px 18px',
-        margin: '0.5rem 0',
       }}
     >
       <h2

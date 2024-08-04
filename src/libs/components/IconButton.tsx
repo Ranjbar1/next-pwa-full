@@ -1,4 +1,5 @@
 import { Button, Box } from '@mui/material'
+import Link from 'next/link'
 
 interface IconButtonProperty {
   icon: React.ReactNode
@@ -19,7 +20,9 @@ export default function IconButton(props: IconButtonProperty) {
         alignItems: 'center',
       }}
     >
-      <span>{props.icon}</span>
+      <Link href={props.path}>
+        <span>{props.icon}</span>
+      </Link>
     </Box>
   )
 }

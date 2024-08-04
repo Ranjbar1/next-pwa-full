@@ -10,6 +10,7 @@ export default function SummaryBox() {
         backgroundColor: '#5d5757',
         borderRadius: '0.7rem',
         padding: '5px 18px',
+        marginTop: '0.5rem ',
       }}
     >
       <h2

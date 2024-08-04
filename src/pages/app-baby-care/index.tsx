@@ -12,9 +12,12 @@ export default function AppPage() {
       style={{ background: 'rgb(64 60 65)', height: '100vh', width: '100vw' }}
     >
       <LandingNavbar />
-      <Divider />
-      <BabyCare />
-      <Divider />
+      <Divider sx={{ backgroundColor: '#8a7f7f' }} />
+      <div style={{ padding: '0.5rem' }}>
+        {' '}
+        <BabyCare />{' '}
+      </div>
+      <Divider sx={{ backgroundColor: '#8a7f7f' }} />
       <div style={{ padding: '0.5rem' }}>
         <LatestActivity />
 

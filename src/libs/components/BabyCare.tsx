@@ -23,7 +23,7 @@ const actions = [
   },
   {
     background: 'cyan',
-    path: '/shop',
+    path: '/leisure',
     icon: <ShoppingBasketIcon style={{ height: '3rem' }} />,
   },
 ] as const
