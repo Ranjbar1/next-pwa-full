@@ -55,7 +55,7 @@ export default function App({
           content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
           key="viewport"
         />
-        {/* <meta name="theme-color" content="#000000" /> */}
+
         <link
           rel="apple-touch-icon"
           href={`/app-icon/icon-512x512.png`}

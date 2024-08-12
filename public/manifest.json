@@ -1,8 +1,19 @@
 {
-  "name": "Saba Application",
-  "short_name": "Saba App",
-  "description": "Saba Application Messenger",
+  "name": "Better MOM!",
+  "short_name": "Better MOM!",
+  "description": "Better MOM App",
   "display": "standalone",
+  "screenshots": [
+    {
+      "form_factor": "wide",
+      "src": "maskable_icon_x192.png"
+    },
+    {
+      "form_factor": "narrow",
+      "src": "maskable_icon_x192.png"
+    }
+  ],
+  "display_override": ["fullscreen", "minimal-ui", "window-controls-overlay"],
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
@@ -10,49 +21,46 @@
   "theme_color": "#4A00C5",
   "icons": [
     {
-      "src": "/app-icon/icon-72x72.png",
-      "type": "image/png",
-      "sizes": "72x72"
+      "purpose": "maskable",
+      "sizes": "350x350",
+      "src": "maskable_icon.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-96x96.png",
-      "type": "image/png",
-      "sizes": "96x96"
+      "purpose": "maskable",
+      "sizes": "48x48",
+      "src": "maskable_icon_x48.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-128x128.png",
-      "type": "image/png",
-      "sizes": "128x128"
+      "purpose": "maskable",
+      "sizes": "72x72",
+      "src": "maskable_icon_x72.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-144x144.png",
-      "type": "image/png",
-      "sizes": "144x144"
+      "purpose": "maskable",
+      "sizes": "96x96",
+      "src": "maskable_icon_x96.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-152x152.png",
-      "type": "image/png",
-      "sizes": "152x152"
+      "purpose": "maskable",
+      "sizes": "128x128",
+      "src": "maskable_icon_x128.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "maskable_icon_x192.png",
+      "type": "image/png"
     },
     {
-      "src": "/app-icon/icon-256x256.png",
-      "type": "image/png",
-      "sizes": "256x256"
-    },
-    {
-      "src": "/app-icon/icon-384x384.png",
-      "type": "image/png",
-      "sizes": "384x384"
-    },
-    {
-      "src": "/app-icon/icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "maskable_icon_x192.png",
+      "type": "image/png"
     }
   ]
 }

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 export default function Navbar() {
   const router = useRouter()
   return (
-    <AppBar>
+    <AppBar sx={{ gridColumn: '-1/1' }}>
       <Container>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Stack direction={'row'} gap={5}>
