@@ -1,5 +1,6 @@
 import CircleIcon from './CircleIcon'
-import WidgetsIcon from '@mui/icons-material/Widgets'
+import NotificationsPausedIcon from '@mui/icons-material/NotificationsPaused'
+import OpacityIcon from '@mui/icons-material/Opacity'
 
 export default function LatestActivity() {
   return (
@@ -30,7 +31,7 @@ export default function LatestActivity() {
         }}
       >
         <CircleIcon
-          icon={<WidgetsIcon style={{ height: '1rem' }} />}
+          icon={<OpacityIcon style={{ height: '1rem' }} />}
           background="#357777"
         />
         <p style={{ marginRight: '0.5rem', fontSize: '0.8rem' }}>
@@ -46,7 +47,7 @@ export default function LatestActivity() {
         }}
       >
         <CircleIcon
-          icon={<WidgetsIcon style={{ height: '1rem' }} />}
+          icon={<NotificationsPausedIcon style={{ height: '1rem' }} />}
           background="purple"
         />
         <p style={{ marginRight: '0.5rem', fontSize: '0.8rem' }}>

@@ -1,30 +1,30 @@
 import IconButton from './IconButton'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import CollectionsIcon from '@mui/icons-material/Collections'
-import RssFeedIcon from '@mui/icons-material/RssFeed'
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
-import WidgetsIcon from '@mui/icons-material/Widgets'
+
+import { LuMilk } from 'react-icons/lu'
+import NotificationsPausedIcon from '@mui/icons-material/NotificationsPaused'
+import OpacityIcon from '@mui/icons-material/Opacity'
+import ChildFriendlySharpIcon from '@mui/icons-material/ChildFriendlySharp'
 
 const actions = [
   {
     background: 'yellow',
     path: '/feeding',
-    icon: <WidgetsIcon style={{ height: '3rem' }} />,
+    icon: <LuMilk style={{ height: '3rem' }} />,
   },
   {
     background: '#5d5da7',
-    path: '/gallery',
-    icon: <CollectionsIcon style={{ height: '3rem' }} />,
+    path: '/diapers',
+    icon: <OpacityIcon style={{ height: '3rem' }} />,
   },
   {
     background: 'purple',
     path: '/blogs',
-    icon: <RssFeedIcon style={{ height: '3rem' }} />,
+    icon: <NotificationsPausedIcon style={{ height: '3rem' }} />,
   },
   {
     background: 'cyan',
     path: '/leisure',
-    icon: <ShoppingBasketIcon style={{ height: '3rem' }} />,
+    icon: <ChildFriendlySharpIcon style={{ height: '3rem' }} />,
   },
 ] as const
 export default function BabyCare() {

@@ -1,10 +1,11 @@
 import { Divider } from '@mui/material'
-import AddIcon from '@mui/icons-material/Add'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import ChildFriendlySharpIcon from '@mui/icons-material/ChildFriendlySharp'
+
 import { Breadcrumbs } from '@/libs/layouts/Breadcrumbs'
 import IconTextButton from '@/libs/components/IconTextButton'
-
+import SwipeLeftAltIcon from '@mui/icons-material/SwipeLeftAlt'
+import SwipeRightAltIcon from '@mui/icons-material/SwipeRightAlt'
+import { LuMilk } from 'react-icons/lu'
+import LocalDiningIcon from '@mui/icons-material/LocalDining'
 export default function Feeding() {
   return (
     <>
@@ -21,22 +22,18 @@ export default function Feeding() {
         }}
       >
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<SwipeLeftAltIcon />}
           text="چپ"
           background="yellow"
         />
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<SwipeRightAltIcon />}
           text="راست"
           background="yellow"
         />{' '}
+        <IconTextButton icon={<LuMilk />} text="شیشه شیر" background="yellow" />{' '}
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
-          text="شیشه شیر"
-          background="yellow"
-        />{' '}
-        <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<LocalDiningIcon />}
           text="غذا"
           background="yellow"
         />

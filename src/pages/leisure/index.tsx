@@ -4,6 +4,9 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ChildFriendlySharpIcon from '@mui/icons-material/ChildFriendlySharp'
 import { Breadcrumbs } from '@/libs/layouts/Breadcrumbs'
 import IconTextButton from '@/libs/components/IconTextButton'
+import ShowerIcon from '@mui/icons-material/Shower'
+import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball'
+import AirlineSeatFlatAngledIcon from '@mui/icons-material/AirlineSeatFlatAngled'
 
 export default function Leisure() {
   return (
@@ -21,12 +24,12 @@ export default function Leisure() {
         }}
       >
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<AirlineSeatFlatAngledIcon />}
           text=" گردن گرفتن"
           background="cyan"
         />
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<SportsVolleyballIcon />}
           text="بازی کردن"
           background="cyan"
         />{' '}
@@ -36,7 +39,7 @@ export default function Leisure() {
           background="cyan"
         />{' '}
         <IconTextButton
-          icon={<ChildFriendlySharpIcon />}
+          icon={<ShowerIcon />}
           text="حمام کردن"
           background="cyan"
         />

@@ -1,4 +1,7 @@
 import CollectionsIcon from '@mui/icons-material/Collections'
+import SettingsIcon from '@mui/icons-material/Settings'
+import DateRangeIcon from '@mui/icons-material/DateRange'
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt'
 const name = 'دایانا'
 
 export default function LandingNavbar() {
@@ -38,9 +41,9 @@ export default function LandingNavbar() {
               justifyContent: 'space-between',
             }}
           >
-            <CollectionsIcon style={{ color: '#8a7f7f' }} />
-            <CollectionsIcon style={{ color: '#8a7f7f' }} />
-            <CollectionsIcon style={{ color: '#8a7f7f' }} />
+            <SettingsIcon style={{ color: '#8a7f7f' }} />
+            <DateRangeIcon style={{ color: '#8a7f7f' }} />
+            <SignalCellularAltIcon style={{ color: '#8a7f7f' }} />
           </div>
         </div>
       </div>

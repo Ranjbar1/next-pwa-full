@@ -1,5 +1,6 @@
 import CircleIcon from './CircleIcon'
-import WidgetsIcon from '@mui/icons-material/Widgets'
+import OpacityIcon from '@mui/icons-material/Opacity'
+import ChildFriendlySharpIcon from '@mui/icons-material/ChildFriendlySharp'
 const Summarys = [{}]
 
 export default function SummaryBox() {
@@ -32,7 +33,7 @@ export default function SummaryBox() {
         }}
       >
         <CircleIcon
-          icon={<WidgetsIcon style={{ height: '1rem' }} />}
+          icon={<OpacityIcon style={{ height: '1rem' }} />}
           background="#357777"
         />
         <p style={{ marginRight: '0.5rem', fontSize: '0.8rem' }}>
@@ -48,7 +49,7 @@ export default function SummaryBox() {
         }}
       >
         <CircleIcon
-          icon={<WidgetsIcon style={{ height: '1rem' }} />}
+          icon={<ChildFriendlySharpIcon style={{ height: '1rem' }} />}
           background="purple"
         />
         <p style={{ marginRight: '0.5rem', fontSize: '0.8rem' }}>
