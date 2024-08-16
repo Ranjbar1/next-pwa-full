@@ -17,8 +17,9 @@ export function Breadcrumbs(props: BreadcrumbsProps) {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              //   border: '1px solid red',
-              height: '1.5rem',
+              // border: '1px solid red',
+              padding: '0',
+              height: '2.5rem',
             }}
           >
             <IconButton
@@ -42,7 +43,15 @@ export function Breadcrumbs(props: BreadcrumbsProps) {
               <p style={{ marginLeft: '0.5rem' }}>{props.name}</p>
 
               <Link href="/app-baby-care">
-                <ArrowBackIcon />
+                <IconButton
+                  aria-label="add"
+                  sx={{ color: '#fff' }}
+                  onClick={() => {
+                    console.log()
+                  }}
+                >
+                  <ArrowBackIcon />
+                </IconButton>
               </Link>
             </div>
           </div>

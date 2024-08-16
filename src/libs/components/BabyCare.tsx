@@ -7,8 +7,8 @@ import WidgetsIcon from '@mui/icons-material/Widgets'
 
 const actions = [
   {
-    background: '#c89942',
-    path: '/app',
+    background: 'yellow',
+    path: '/feeding',
     icon: <WidgetsIcon style={{ height: '3rem' }} />,
   },
   {

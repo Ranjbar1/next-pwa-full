@@ -5,10 +5,10 @@ import ChildFriendlySharpIcon from '@mui/icons-material/ChildFriendlySharp'
 import { Breadcrumbs } from '@/libs/layouts/Breadcrumbs'
 import IconTextButton from '@/libs/components/IconTextButton'
 
-export default function Leisure() {
+export default function Feeding() {
   return (
     <>
-      <Breadcrumbs name="Leisure" onclick="onclick" />
+      <Breadcrumbs name="Feeding" onclick="onclick" />
 
       <div
         style={{
@@ -22,23 +22,23 @@ export default function Leisure() {
       >
         <IconTextButton
           icon={<ChildFriendlySharpIcon />}
-          text=" گردن گرفتن"
-          background="cyan"
+          text="چپ"
+          background="yellow"
         />
         <IconTextButton
           icon={<ChildFriendlySharpIcon />}
-          text="بازی کردن"
-          background="cyan"
+          text="راست"
+          background="yellow"
         />{' '}
         <IconTextButton
           icon={<ChildFriendlySharpIcon />}
-          text="بیرون رفتن"
-          background="cyan"
+          text="شیشه شیر"
+          background="yellow"
         />{' '}
         <IconTextButton
           icon={<ChildFriendlySharpIcon />}
-          text="حمام کردن"
-          background="cyan"
+          text="غذا"
+          background="yellow"
         />
       </div>
       <Divider sx={{ backgroundColor: '#8a7f7f' }} />
